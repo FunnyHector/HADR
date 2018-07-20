@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hono</title>
+
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Hono in Maori means to join, and connect. We provide a easy-to-use efficient solution to bridge people who offer and seek helps when disaster happens.">
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <!-- Pure css -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="<%= controller.controller_name %>">
+<div id="banner">
+  <%= image_tag "logo.svg", height: '80', width: '80', alt: "Hono, where help happens" %>
+  <span class="title">Hono</span>
+</div>
+
+<div id="main">
+  <%= yield %>
+</div>
+</body>
+</html>
