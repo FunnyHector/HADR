@@ -1,7 +1,129 @@
-<header>
-  <h1>The Title</h1>
-</header>
+<div class="header">
+  <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href="">Hono</a>
 
-<div>
-  <p>The Content</p>
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item">
+        <a href="#" class="pure-menu-link">How It Works?</a>
+      </li>
+      <li class="pure-menu-item">
+        <a href="#sign-up" class="pure-menu-link">Sign Up</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="splash-container">
+  <div class="splash">
+    <h1 class="splash-head">First block goes here</h1>
+    <p class="splash-subhead">
+      some sub-header
+    </p>
+    <p>
+      <a href="#" class="pure-button pure-button-primary">Get Started</a>
+    </p>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="content">
+    <h2 class="content-head is-center">Second Block Goes Here</h2>
+
+    <div class="pure-g">
+      <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+
+        <h3 class="content-subhead">
+          <i class="fa fa-rocket"></i>
+          Some column No.1
+        </h3>
+        <p>
+          Important things about column 1
+        </p>
+      </div>
+
+      <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+        <h3 class="content-subhead">
+          <i class="fa fa-mobile"></i>
+          Some column No.2
+        </h3>
+        <p>
+          Important things about column 2
+        </p>
+      </div>
+
+      <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+        <h3 class="content-subhead">
+          <i class="fa fa-th-large"></i>
+          Some column No.3
+        </h3>
+        <p>
+          Important things about column 3
+        </p>
+      </div>
+
+      <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+        <h3 class="content-subhead">
+          <i class="fa fa-check-square-o"></i>
+          Some column No.4
+        </h3>
+        <p>
+          Important things about column 4
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ribbon l-box-lrg pure-g">
+    <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+      <%= image_tag "logo.svg", height: '300', width: '300', alt: "Hono, where help happens", class: "pure-img-responsive" %>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+      <h2 class="content-head content-head-ribbon">Third Block Goes Here</h2>
+
+      <p>
+        What's so important of block 3
+      </p>
+
+      <p>
+        Also, the logo can go somewhere else
+      </p>
+    </div>
+  </div>
+
+  <div class="content" id="sign-up">
+    <h2 class="content-head is-center">Sign up now, prepare early</h2>
+
+    <div class="pure-g">
+      <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+        <form class="pure-form pure-form-stacked">
+          <fieldset>
+            <label for="name">Your Name</label>
+            <input id="name" type="text" placeholder="Your Name">
+
+            <label for="email">Your Email</label>
+            <input id="email" type="email" placeholder="Your Email">
+
+            <label for="password">Your Password</label>
+            <input id="password" type="password" placeholder="Your Password">
+
+            <button type="submit" class="pure-button">Sign Up</button>
+          </fieldset>
+        </form>
+
+        <% # TODO: form_for %>
+      </div>
+
+      <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+        <h4>Contact Us</h4>
+        <p>
+          Why you should talk to us
+        </p>
+
+        <h4>More Stuff</h4>
+        <p>
+          More and MORE stuff
+        </p>
+      </div>
+    </div>
+  </div>
 </div>

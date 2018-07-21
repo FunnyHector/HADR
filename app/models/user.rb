@@ -7,14 +7,7 @@ class User < ApplicationRecord
 
   validates :email_address, presence: true, uniqueness: true
 
-  validate :name_valid
+  # TODO: format validation on password
+  validates :password, presence: true, uniqueness: true
 
-  private
-
-  def name_valid
-    if first_name.blank? && last_name.blank? && preferred_name.blank?
-      errors.add(:base, "one of first name, last name, or preferred name has to be present")
-    end
-  end
 end
-
