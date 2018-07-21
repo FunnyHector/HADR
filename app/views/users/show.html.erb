@@ -1,0 +1,19 @@
+<div class="header">
+  <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href="">Your Dashboard</a>
+
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item">
+        <a href="/" class="pure-menu-link">Homepage</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="content">
+  <% if @user.verified? %>
+    <%= render partial: "details" %>
+  <% else %>
+    <%= render partial: "verify" %>
+  <% end %>
+</div>

@@ -95,22 +95,18 @@
 
     <div class="pure-g">
       <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-        <form class="pure-form pure-form-stacked">
-          <fieldset>
-            <label for="name">Your Name</label>
-            <input id="name" type="text" placeholder="Your Name">
+        <%= form_for :user, url: url_for(:controller => 'users', :action => 'create'), html: { class: "pure-form pure-form-stacked" } do |f| %>
+          <label for="name">Your Name</label>
+          <%= f.text_field :name, placeholder: "Your Name" %>
 
-            <label for="email">Your Email</label>
-            <input id="email" type="email" placeholder="Your Email">
+          <label for="email_address">Your Email</label>
+          <%= f.email_field :email_address, placeholder: "Your Email Address" %>
 
-            <label for="password">Your Password</label>
-            <input id="password" type="password" placeholder="Your Password">
+          <label for="password">Your Password</label>
+          <%= f.password_field :password, placeholder: "Your Password" %>
 
-            <button type="submit" class="pure-button">Sign Up</button>
-          </fieldset>
-        </form>
-
-        <% # TODO: form_for %>
+          <%= f.submit "Sign Up", class: "pure-button" %>
+      <% end %>
       </div>
 
       <div class="l-box-lrg pure-u-1 pure-u-md-3-5">

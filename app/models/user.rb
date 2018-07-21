@@ -10,4 +10,8 @@ class User < ApplicationRecord
   # TODO: format validation on password
   validates :password, presence: true, uniqueness: true
 
+  def verified?
+    # TODO: email_verified_at.present?
+    true
+  end
 end
