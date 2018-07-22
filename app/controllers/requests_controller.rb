@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class RequestsController < ApplicationController
-  before_action :find_user, only: [:show]
+  before_action :find_request, only: [:show]
   before_action :sanitise_params, only: [:create]
 
   def create
@@ -21,8 +21,6 @@ class RequestsController < ApplicationController
 
       redirect_to request_path(@request)
     else
-      binding.pry
-
       redirect_to "/#find-help-panel", error: 'Something is wrong!'
     end
   end
@@ -32,7 +30,7 @@ class RequestsController < ApplicationController
 
   private
 
-  def find_user
+  def find_request
     @request = Request.find(params[:id])
   end
 

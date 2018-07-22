@@ -15,7 +15,7 @@ class OfferItem < ApplicationRecord
 
   belongs_to :offer
   belongs_to :exchange, optional: true
-  has_one :offer_item_validation, optional: true
+  has_one :offer_item_validation
 
   validates :offer_type, inclusion: { in: SUPPORTED_TYPES }
 

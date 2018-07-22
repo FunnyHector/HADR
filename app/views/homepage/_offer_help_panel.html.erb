@@ -1,3 +1,61 @@
 <h2 class="content-head is-center">What could you offer?</h2>
 
-<p>OFFER HELP PANEL</p>
+<%= form_for :offer, url: url_for(:controller => 'offers', :action => 'create'), html: { class: "pure-form" } do |f| %>
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+      <label for="offer_food" class="pure-checkbox">
+        <%= f.check_box :food %>
+        Food
+      </label>
+
+      <label for="offer_medicine" class="pure-checkbox">
+        <%= f.check_box :medicine %>
+        Medicine
+      </label>
+
+      <label for="offer_water" class="pure-checkbox">
+        <%= f.check_box :water %>
+        Water
+      </label>
+
+      <label for="offer_housing_and_shelter" class="pure-checkbox">
+        <%= f.check_box :housing_and_shelter %>
+        Housing & Shelter
+      </label>
+
+      <label for="offer_other" class="pure-checkbox">
+        <%= f.check_box :other %>
+        Other
+      </label>
+    </div>
+
+    <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+      <label for="offer_labour" class="pure-checkbox">
+        <%= f.check_box :labour %>
+        Labour
+      </label>
+
+      <label for="offer_equipment" class="pure-checkbox">
+        <%= f.check_box :equipment %>
+        Equipment
+      </label>
+
+      <label for="offer_short_range_transport" class="pure-checkbox">
+        <%= f.check_box :short_range_transport %>
+        Transport (Short range)
+      </label>
+
+      <label for="offer_clothes_and_blankets" class="pure-checkbox">
+        <%= f.check_box :clothes_and_blankets %>
+        Clothes & Blankets
+      </label>
+    </div>
+  </div>
+
+  <div class="content is-center">
+    <%= f.submit "I can provide!", class: "pure-button" %>
+  </div>
+<% end %>
+
+
+<p> ^^^^^^^^^^^^^^^  OFFER HELP PANEL  ^^^^^^^^^^^^^^^^</p>

@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create, :show]
   resources :requests, only: [:create, :show]
+  resources :offers, only: [:create, :show]
 end

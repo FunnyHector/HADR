@@ -1,7 +1,6 @@
 <h2 class="content-head is-center">What do you need?</h2>
 
 <%= form_for :request, url: url_for(:controller => 'requests', :action => 'create'), html: { class: "pure-form" } do |f| %>
-
   <div class="pure-g">
     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
       <label for="request_food" class="pure-checkbox">
@@ -30,7 +29,6 @@
       </label>
     </div>
 
-
     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
       <label for="request_labour" class="pure-checkbox">
         <%= f.check_box :labour %>
@@ -57,19 +55,6 @@
   <div class="content is-center">
     <%= f.submit "Search", class: "pure-button" %>
   </div>
-
-
-
-<!--  <div class="pure-u-1-24"></div>-->
-
-
-
-
-
-
-
 <% end %>
 
-
-
-<p>FIND HELP PANEL</p>
+<p> ^^^^^^^^^^^^^^^  FIND HELP PANEL  ^^^^^^^^^^^^^^^^</p>

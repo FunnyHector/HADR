@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href="">Offer NO. <%= @offer.id %></a>
+
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item">
+        <a href="/" class="pure-menu-link">Homepage</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="content">
+  <header>
+    <h2 class="content-head">Details</h2>
+  </header>
+
+  <div class="content">
+    <dl>
+      <% @offer.offer_items.each do |item| %>
+        <dt>Offered: </dt>
+        <dd><%= item.offer_type.humanize %></dd>
+      <% end %>
+    </dl>
+  </div>
+</div>
