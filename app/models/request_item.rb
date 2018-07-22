@@ -4,7 +4,7 @@ class RequestItem < ApplicationRecord
   SUPPORTED_TYPES = %w[
     food
     medicine
-    drinkable_water
+    water
     housing_and_shelter
     labour
     equipment

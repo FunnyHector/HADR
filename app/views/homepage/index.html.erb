@@ -15,7 +15,7 @@
 
 <div class="splash-container">
   <div class="splash">
-    <h1 class="splash-head">First block goes here</h1>
+    <h1 class="splash-head">HONO</h1>
     <p class="splash-subhead">
       some sub-header
     </p>
@@ -74,27 +74,13 @@
   </div>
 
   <div class="content">
-    <div class="tabs">
-      <span>
-        <input id="tab-seek-help" type="radio" name="tabs" checked>
-        <label for="tab-seek-help">
-          <h3 class="content-subhead">Seek Help</h3>
-        </label>
-      </span>
+    <%= render partial: "find_or_offer_help_tabs" %>
 
-      <span>
-        <input id="tab-offer-help" type="radio" name="tabs">
-        <label for="tab-offer-help">
-          <h3 class="content-subhead">Offer Help</h3>
-        </label>
-      </span>
-    </div>
-
-    <div id="find-help-panel" class="content">
+    <div id="find-help-panel" class="content tabbed-panel">
       <%= render partial: "find_help_panel" %>
     </div>
 
-    <div id="offer-help-panel" class="content">
+    <div id="offer-help-panel" class="content tabbed-panel">
       <%= render partial: "offer_help_panel" %>
     </div>
   </div>

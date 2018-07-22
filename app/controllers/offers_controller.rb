@@ -21,8 +21,6 @@ class OffersController < ApplicationController
 
       redirect_to offer_path(@offer)
     else
-      binding.pry
-
       redirect_to "/#offer-help-panel", error: 'Something is wrong!'
     end
   end

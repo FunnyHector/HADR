@@ -133,6 +133,14 @@ a.pure-button-primary {
   color: #AECFE5;
 }
 
+a {
+  cursor: pointer;
+}
+
+#tabs {
+
+}
+
 /*
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
@@ -234,11 +242,6 @@ a.pure-button-primary {
 iframe {
   border: 1em;
 }
-
-//#find-help-form, #offer-help-form {
-//  margin: auto;
-//  width: 50%;
-//}
 
 /* This is the class used for the footer */
 .footer {

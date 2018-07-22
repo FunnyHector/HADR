@@ -15,3 +15,17 @@
 //= require turbolinks
 //= require_tree .
 
+function openTab(tabName) {
+  // Declare all variables
+  let i, tabContent, tabLinks, tab;
+
+  // Get all elements with class="tabbed-panel" and hide them
+  tabContent = document.getElementsByClassName("tabbed-panel");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+
+  // display the wanted one
+  tab = document.getElementById(tabName);
+  tab.style.display = "block";
+}
