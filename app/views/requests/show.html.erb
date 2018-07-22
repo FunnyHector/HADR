@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href="">Request NO. <%= @request.id %></a>
+
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item">
+        <a href="/" class="pure-menu-link">Homepage</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="content">
+  <header>
+    <h2 class="content-head">Details</h2>
+  </header>
+
+  <div class="content">
+    <dl>
+      <% @request.request_items.each do |item| %>
+        <dt>Need: </dt>
+        <dd><%= item.request_type.humanize %></dd>
+      <% end %>
+    </dl>
+  </div>
+</div>

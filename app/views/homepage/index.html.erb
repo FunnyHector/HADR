@@ -36,8 +36,8 @@
         Community hubs around you
       </h2>
 
-      <h4>
-        PEOPLE! Write something for this paragraph
+      <h4 class="content-subhead">
+        PEOPLE! Write something for this subheading
       </h4>
 
       <p>
@@ -50,7 +50,7 @@
     <h2 class="content-head content-head-ribbon is-center">Second Block Goes Here</h2>
 
     <div class="pure-g">
-      <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+      <div class="is-center pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
 
         <h3 class="content-subhead">
           <i class="fa fa-rocket"></i>
@@ -61,7 +61,7 @@
         </p>
       </div>
 
-      <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+      <div class="is-center pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
         <h3 class="content-subhead">
           <i class="fa fa-mobile"></i>
           Some column No.2
@@ -70,29 +70,34 @@
           Important things about column 2
         </p>
       </div>
-
-      <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-        <h3 class="content-subhead">
-          <i class="fa fa-th-large"></i>
-          Some column No.3
-        </h3>
-        <p>
-          Important things about column 3
-        </p>
-      </div>
-
-      <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-        <h3 class="content-subhead">
-          <i class="fa fa-check-square-o"></i>
-          Some column No.4
-        </h3>
-        <p>
-          Important things about column 4
-        </p>
-      </div>
     </div>
   </div>
 
+  <div class="content">
+    <div class="tabs">
+      <span>
+        <input id="tab-seek-help" type="radio" name="tabs" checked>
+        <label for="tab-seek-help">
+          <h3 class="content-subhead">Seek Help</h3>
+        </label>
+      </span>
+
+      <span>
+        <input id="tab-offer-help" type="radio" name="tabs">
+        <label for="tab-offer-help">
+          <h3 class="content-subhead">Offer Help</h3>
+        </label>
+      </span>
+    </div>
+
+    <div id="find-help-panel" class="content">
+      <%= render partial: "find_help_panel" %>
+    </div>
+
+    <div id="offer-help-panel" class="content">
+      <%= render partial: "offer_help_panel" %>
+    </div>
+  </div>
 
   <div class="content" id="sign-up">
     <h2 class="content-head is-center">Sign up now, prepare early</h2>
@@ -100,13 +105,13 @@
     <div class="pure-g">
       <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
         <%= form_for :user, url: url_for(:controller => 'users', :action => 'create'), html: { class: "pure-form pure-form-stacked" } do |f| %>
-          <label for="name">Your Name</label>
+          <label for="user_name">Your Name</label>
           <%= f.text_field :name, placeholder: "Your Name" %>
 
-          <label for="email_address">Your Email</label>
+          <label for="user_email_address">Your Email</label>
           <%= f.email_field :email_address, placeholder: "Your Email Address" %>
 
-          <label for="password">Your Password</label>
+          <label for="user_password">Your Password</label>
           <%= f.password_field :password, placeholder: "Your Password" %>
 
           <%= f.submit "Sign Up", class: "pure-button" %>
