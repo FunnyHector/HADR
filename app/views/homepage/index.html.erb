@@ -26,6 +26,19 @@
 </div>
 
 <div class="content-wrapper">
+
+  <div class="content">
+    <%= render partial: "find_or_offer_help_tabs" %>
+
+    <div id="find-help-panel" class="content tabbed-panel">
+      <%= render partial: "find_help_panel" %>
+    </div>
+
+    <div id="offer-help-panel" class="content tabbed-panel" style="display:none">
+      <%= render partial: "offer_help_panel" %>
+    </div>
+  </div>
+
   <div class="content pure-g ribbon">
     <iframe class="pure-u-2-3" src="https://www.google.com/maps/d/embed?mid=1HfZPPnSvsTx0vNikbQNhkLdRmVY" width="640" height="480"></iframe>
 
@@ -43,18 +56,6 @@
       <p>
         Help each other at your nearest community hub.
       </p>
-    </div>
-  </div>
-
-  <div class="content">
-    <%= render partial: "find_or_offer_help_tabs" %>
-
-    <div id="find-help-panel" class="content tabbed-panel">
-      <%= render partial: "find_help_panel" %>
-    </div>
-
-    <div id="offer-help-panel" class="content tabbed-panel" style="display:none">
-      <%= render partial: "offer_help_panel" %>
     </div>
   </div>
 
